@@ -9,6 +9,8 @@ def home():
             msg = "Καλώς ήρθες admin"
         elif request.form["user"] == "saek":
             msg = "Καλημέρα ΣΑΕΚ Κηφισιάς"
+        elif request.form["user"] == "pusheenlover67":
+            msg = "Καλημέρα gayfaggot lesvia gamw thn mana sou"
         else:
             msg = "Λάθος χρήστης"
     return render_template("index.html", msg=msg)
