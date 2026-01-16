@@ -15,5 +15,9 @@ def home():
             msg = "Λάθος χρήστης"
     return render_template("index.html", msg=msg)
 
+@app.route("/gallery")
+def gallery():
+    return render_template("gallery.html")
+
 if __name__ == "__main__":
     app.run()
