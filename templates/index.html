@@ -1,5 +1,92 @@
-<form method="post">
-<input name="user" placeholder="username">
-<button>login</button>
-</form>
-{% if msg %}<p>{{ msg }}</p>{% endif %}
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <title>Unicorn Login</title>
+
+    <!-- UNICORN Y2K CSS INLINE -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Pacifico&display=swap');
+
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #ffc0ff, #c1f7ff, #fff6c7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Comic Neue', cursive;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.88);
+            border-radius: 25px;
+            padding: 40px;
+            width: 330px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(255, 182, 193, 0.8);
+            border: 3px solid #ffb6e6;
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: #ff69b4;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 20px;
+            border: 2px solid #aee7ff;
+            margin-bottom: 15px;
+            outline: none;
+            font-size: 16px;
+            background: #fdfcff;
+        }
+
+        input::placeholder {
+            color: #caa0ff;
+        }
+
+        button {
+            background: linear-gradient(90deg, #ff9ad5, #8be9ff);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.07);
+            box-shadow: 0 0 15px #ffb6e6;
+        }
+
+        .msg {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #7b4fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>🌈 Welcome Bestie 🌈</h1>
+
+        <form method="POST">
+            <input type="text" name="user" placeholder="username ✨" required>
+            <button type="submit">enter the dream 💖</button>
+        </form>
+
+        {% if msg %}
+            <p class="msg">{{ msg }}</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>
