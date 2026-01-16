@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <title>Y2K Aesthetic Gallery</title>
+
+    <!-- Inline CSS -->
+    <style>
+        body {
+            background: linear-gradient(120deg, #ffe4f0, #e0f7ff, #fffced);
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #ec008c;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px #fff;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 0 40px;
+        }
+        .grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .grid img:hover {
+            transform: scale(1.07);
+            box-shadow: 0px 6px 15px rgba(0,0,0,0.35);
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🌈 Y2K Aesthetic Vibes 🌴🦄</h1>
+
+<div class="grid">
+    <!-- Example placeholders — replace with real images later -->
+    <img src="{{ url_for('static', filename='img/dolphin1.jpg') }}" alt="Dolphin Y2K">
+    <img src="{{ url_for('static', filename='img/y2k1.jpg') }}" alt="Y2K aesthetic">
+    <img src="{{ url_for('static', filename='img/zara1.jpg') }}" alt="Zara Larsson Y2K">
+    <img src="{{ url_for('static', filename='img/pusheen1.jpg') }}" alt="Pusheen Y2K">
+    <img src="{{ url_for('static', filename='img/symphony1.jpg') }}" alt="Symphony aesthetic">
+    <img src="{{ url_for('static', filename='img/mix1.jpg') }}" alt="Y2K collage">
+</div>
+
+<!-- Background music -->
+<audio autoplay loop>
+    <source src="{{ url_for('static', filename='audio/symphony_loop.mp3') }}" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+</body>
+</html>
